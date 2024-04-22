@@ -68,14 +68,16 @@ saveToLS()
   return (
     <>
       <Navbar/>
-      <div className="md:container text-center mx-3 md:mx-auto rounded-xl md:w-[40%] min-h-[80vh] my-10">
+      <div className="md:container  mx-3 md:mx-auto rounded-xl md:w-[40%] sm:mx-auto sm:w-[60%] min-h-[80vh] my-10">
         <div className="addTodo bg-slate-800 p-8 rounded-xl ">
-          <h1 className='text-3xl text-white mb-2'>Add Todo</h1>
+          <h1 className='text-3xl text-white mb-2 text-center'>Add Todo</h1>
           <input onChange={handleChange}  value={todo} type="text" className='outline-none w-full h-[5vh] px-2 rounded-md' />
           <button onClick={handleAdd} disabled={todo.length<=3} className="bg-violet-800 hover:bg-violet-950 disabled:bg-black text-white p-1 text-sm font-bold rounded-md mt-5 w-full ">Save</button>
         </div>
+        <div className='mt-[2%] font-medium text-slate-600'>
         <input type="checkbox" onChange={toggleFinished} checked={showFinished} /> Show Finished
-        <h2 className='text-2xl font-bold mt-[1vh]'>Your Todos</h2>
+        </div>
+        <h2 className='text-2xl font-bold  text-center'>Your Todos</h2>
         <div className='w-[70%] h-1.5 rounded-lg m-auto mt-2 bg-slate-400'></div>
         <div className='todos my-10  mx-auto '>
           {todos.length===0 && <div className='m-2'>No Todos to display</div>}
